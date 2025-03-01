@@ -2,13 +2,13 @@ package sys.tem.model;
 
 import lombok.*;
 
-@Builder
-@Data
+
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
+@Builder
 @NoArgsConstructor
+@ToString
 public class TransferData {
     private Transfer transfer;
     private TransferStatus transferStatus;

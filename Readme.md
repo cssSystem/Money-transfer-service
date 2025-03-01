@@ -43,6 +43,7 @@
 > Ответ:
 >> {  
 > > “operationId”:
+> >
 “1”&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; -
 > > номер транзакции  
 > > }

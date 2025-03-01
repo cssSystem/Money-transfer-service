@@ -4,13 +4,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
-@Builder
-@Data
-@AllArgsConstructor
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
+@ToString
 public class Transfer {
     @NotBlank
     @Size(min = 16, max = 16)

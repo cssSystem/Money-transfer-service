@@ -1,9 +1,9 @@
 package sys.tem.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import sys.tem.exception.ErrorTransferConfirmException;
-import sys.tem.logger.Logger;
 import sys.tem.model.ConfirmOperation;
 import sys.tem.model.RequestResponse;
 import sys.tem.model.Transfer;
@@ -15,11 +15,13 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
+import static sys.tem.MoneyTransferServiceApplication.MI;
+
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class TransferService {
     private final TransferRepository transferRepository;
-    Logger log = Logger.getInstance();
 
     public RequestResponse transfer(Transfer transfer) {
         String id = transferRepository.addTransfer(TransferData.builder()
@@ -38,7 +40,7 @@ public class TransferService {
             }
         }
         String msg = "Error Confirm Operation: " + confirmOperation;
-        log.log(msg);
+        log.info(MI, msg);
         throw new ErrorTransferConfirmException("Error Confirm Operation: " + confirmOperation);
     }
 }
