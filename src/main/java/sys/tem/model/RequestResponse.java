@@ -6,6 +6,8 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class RequestResponse {
     private String operationId;
 }

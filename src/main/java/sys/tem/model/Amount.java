@@ -7,6 +7,8 @@ import lombok.*;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Amount {
     private int value;
     @NotBlank
